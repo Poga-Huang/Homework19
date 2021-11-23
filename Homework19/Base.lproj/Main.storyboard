@@ -1,24 +1,760 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GjP-ZB-TBE">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--華語年度單曲榜-->
+        <scene sceneID="sTZ-3T-rWZ">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <tableViewController id="XKj-yX-RkO" customClass="MusicChartTableViewController" customModule="Homework19" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" dataMode="static" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" sectionFooterHeight="-1" id="rdO-9Z-rfM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="uMJ-4k-Iaf">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="EHu-ZL-kHH">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                                <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WQ9-Da-XXw">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="6uv-xm-PjE">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <subviews>
+                                            <button hidden="YES" opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TLa-WD-dEL">
+                                                <rect key="frame" x="24" y="182" width="50" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" backgroundImage="left"/>
+                                                <connections>
+                                                    <action selector="back:" destination="XKj-yX-RkO" eventType="touchUpInside" id="nax-Hv-Q3I"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y3d-zu-gsw">
+                                                <rect key="frame" x="340" y="182" width="50" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" backgroundImage="right"/>
+                                                <connections>
+                                                    <action selector="next:" destination="XKj-yX-RkO" eventType="touchUpInside" id="x5Q-ro-EhG"/>
+                                                </connections>
+                                            </button>
+                                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="y8c-I5-EwB">
+                                                <rect key="frame" x="82" y="388" width="250" height="26"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="pageIndicatorTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="currentPageIndicatorTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <connections>
+                                                    <action selector="changeCurrentPage:" destination="XKj-yX-RkO" eventType="valueChanged" id="5E3-SF-ZfH"/>
+                                                </connections>
+                                            </pageControl>
+                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2XX-Cy-LXA">
+                                                <rect key="frame" x="82" y="80" width="250" height="300"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" id="S2U-w7-SXj">
+                                                        <rect key="frame" x="0.0" y="0.0" width="1250" height="300"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="DYd-cA-fTs">
+                                                                <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <gestureRecognizers/>
+                                                                <connections>
+                                                                    <outletCollection property="gestureRecognizers" destination="gny-H7-UPb" appends="YES" id="bY6-FR-uR2"/>
+                                                                    <outletCollection property="gestureRecognizers" destination="8Dv-HF-i3j" appends="YES" id="P24-ex-2hm"/>
+                                                                </connections>
+                                                            </imageView>
+                                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="nH4-dq-Dg8">
+                                                                <rect key="frame" x="250" y="0.0" width="250" height="250"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <gestureRecognizers/>
+                                                                <connections>
+                                                                    <outletCollection property="gestureRecognizers" destination="a5v-gZ-CeG" appends="YES" id="8Jg-jg-117"/>
+                                                                    <outletCollection property="gestureRecognizers" destination="KKh-Yn-b9D" appends="YES" id="Xmf-gS-EOo"/>
+                                                                </connections>
+                                                            </imageView>
+                                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="3" translatesAutoresizingMaskIntoConstraints="NO" id="GZz-nL-XiV">
+                                                                <rect key="frame" x="500" y="0.0" width="250" height="250"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <gestureRecognizers/>
+                                                                <connections>
+                                                                    <outletCollection property="gestureRecognizers" destination="mzz-db-L9B" appends="YES" id="5Rf-fv-J9S"/>
+                                                                    <outletCollection property="gestureRecognizers" destination="VtM-w7-Cwg" appends="YES" id="WtL-xc-K6n"/>
+                                                                </connections>
+                                                            </imageView>
+                                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="4" translatesAutoresizingMaskIntoConstraints="NO" id="6IK-8e-T7m">
+                                                                <rect key="frame" x="750" y="0.0" width="250" height="250"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <gestureRecognizers/>
+                                                                <connections>
+                                                                    <outletCollection property="gestureRecognizers" destination="qfh-yy-1Xv" appends="YES" id="tvP-pz-QJV"/>
+                                                                    <outletCollection property="gestureRecognizers" destination="lsC-6Z-LtW" appends="YES" id="LA6-oF-NiN"/>
+                                                                </connections>
+                                                            </imageView>
+                                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="5" translatesAutoresizingMaskIntoConstraints="NO" id="btg-3L-STp">
+                                                                <rect key="frame" x="1000" y="0.0" width="250" height="250"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <gestureRecognizers/>
+                                                                <connections>
+                                                                    <outletCollection property="gestureRecognizers" destination="4KQ-sw-zNC" appends="YES" id="vbH-wl-pbY"/>
+                                                                    <outletCollection property="gestureRecognizers" destination="pP3-Oa-3sU" appends="YES" id="JTO-BE-cVx"/>
+                                                                </connections>
+                                                            </imageView>
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xqv-oY-i6l">
+                                                                <rect key="frame" x="0.0" y="250" width="250" height="50"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <attributedString key="attributedText">
+                                                                    <fragment content="愛情你比我想的閣較偉大">
+                                                                        <attributes>
+                                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                            <font key="NSFont" metaFont="system" size="18"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content=" ">
+                                                                        <attributes>
+                                                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                            <font key="NSFont" metaFont="system" size="18"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content="茄子蛋">
+                                                                        <attributes>
+                                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                            <font key="NSFont" metaFont="cellTitle"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                </attributedString>
+                                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                            </textView>
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ojt-v0-bJr">
+                                                                <rect key="frame" x="250" y="250" width="250" height="50"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <attributedString key="attributedText">
+                                                                    <fragment content="在這座城市遺失了你">
+                                                                        <attributes>
+                                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                            <font key="NSFont" metaFont="system" size="18"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content=" ">
+                                                                        <attributes>
+                                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                            <font key="NSFont" metaFont="smallSystem"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content="告五人">
+                                                                        <attributes>
+                                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="0.51000000000000001" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                            <font key="NSFont" metaFont="smallSystem"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                </attributedString>
+                                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                            </textView>
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7gn-zU-Axn">
+                                                                <rect key="frame" x="500" y="250" width="250" height="50"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <attributedString key="attributedText">
+                                                                    <fragment content="我很好騙">
+                                                                        <attributes>
+                                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                            <font key="NSFont" metaFont="system" size="18"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content=" ">
+                                                                        <attributes>
+                                                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                            <font key="NSFont" metaFont="system" size="18"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content="動力火車">
+                                                                        <attributes>
+                                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="0.50013196138525196" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <font key="NSFont" metaFont="cellTitle"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                </attributedString>
+                                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                            </textView>
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iyy-F4-6Rr">
+                                                                <rect key="frame" x="750" y="250" width="250" height="50"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <attributedString key="attributedText">
+                                                                    <fragment content="四季予你">
+                                                                        <attributes>
+                                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                            <font key="NSFont" metaFont="system" size="18"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content=" ">
+                                                                        <attributes>
+                                                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                            <font key="NSFont" metaFont="system" size="18"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content="程響">
+                                                                        <attributes>
+                                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="0.50204190340909094" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <font key="NSFont" metaFont="cellTitle"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                </attributedString>
+                                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                            </textView>
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tvI-Ek-ARA">
+                                                                <rect key="frame" x="1000" y="250" width="250" height="50"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <attributedString key="attributedText">
+                                                                    <fragment content="因為你 所以我">
+                                                                        <attributes>
+                                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                            <font key="NSFont" metaFont="system" size="18"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content=" ">
+                                                                        <attributes>
+                                                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                            <font key="NSFont" metaFont="system" size="18"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content="五月天">
+                                                                        <attributes>
+                                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="0.51000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <font key="NSFont" metaFont="cellTitle"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                </attributedString>
+                                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                            </textView>
+                                                        </subviews>
+                                                        <viewLayoutGuide key="safeArea" id="LJE-gX-fKb"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </view>
+                                                </subviews>
+                                                <viewLayoutGuide key="contentLayoutGuide" id="tiU-s9-Txy"/>
+                                                <viewLayoutGuide key="frameLayoutGuide" id="oWo-Jt-apX"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="size" keyPath="contentSize">
+                                                        <size key="value" width="1250" height="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </scrollView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Top 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D5N-zf-1Qv">
+                                                <rect key="frame" x="82" y="24" width="250" height="48"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="30"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </view>
+                                    <blurEffect style="regular"/>
+                                </visualEffectView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <sections>
+                            <tableViewSection id="yup-uN-xm1">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="50" id="iEs-21-Ee6">
+                                        <rect key="frame" x="0.0" y="458.5" width="414" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iEs-21-Ee6" id="oD9-O9-uGN">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="hYm-69-6BK">
+                                                    <rect key="frame" x="20" y="9" width="374" height="32"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <segments>
+                                                        <segment title="Top1"/>
+                                                        <segment title="Top 2"/>
+                                                        <segment title="Top 3"/>
+                                                        <segment title="Top 4"/>
+                                                        <segment title="Top 5"/>
+                                                    </segments>
+                                                    <color key="selectedSegmentTintColor" red="0.98669379950000002" green="0.8230933547" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <connections>
+                                                        <action selector="changeContentView:" destination="XKj-yX-RkO" eventType="valueChanged" id="bFl-H0-VOy"/>
+                                                    </connections>
+                                                </segmentedControl>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="200" id="mww-H1-fKk">
+                                        <rect key="frame" x="0.0" y="508.5" width="414" height="200"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mww-H1-fKk" id="CNA-Ql-GXl">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y9M-YD-yoH">
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="200"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" id="K4a-IB-7Eg">
+                                                            <rect key="frame" x="0.0" y="-0.5" width="1870" height="200"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <subviews>
+                                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jHS-gh-4wg">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="200"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <color key="backgroundColor" red="0.50145141599999998" green="0.50145141599999998" blue="0.50145141599999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <mutableString key="text">作詞：黃奇斌   作曲：黃奇斌
+編曲：茄子蛋
+
+倒佇故鄉街市的中央
+笑看世界咧轉踅
+你是我
+烏暗的心唯一的光
+親像是眼前的燈火
+
+原諒我這款放蕩的人
+原諒我做這款夭壽的夢
+每一擺你的眼神咧振動
+攏予我無法分西東
+哦
+
+我用我的人格來保證
+我是永遠袂後悔
+你是我
+目前為止的愛人內底
+無疑是上水的彼個
+
+我其實毋是毋願離開
+攏怪你行入了我的人生
+無心的愛情傷害已造成
+你我著愛來負責任
+哦
+
+愛情你比我想的閣較偉大
+你予我這世人最後的期待
+你是我的未來
+希望你會了解
+
+雖然江山易改
+但本性難移
+愛你愛甲白目眉
+哦
+
+愛情你比我想的閣較偉大
+你予我這世人最後的期待
+你是我的未來
+希望你會了解
+
+雖然江山易改
+但本性難移
+愛你愛甲白目眉
+
+毋管你知毋知
+予你全部的愛
+愛你愛甲白目眉
+哦</mutableString>
+                                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                            <integer key="value" value="10"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </textView>
+                                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ubd-jR-f7z">
+                                                                    <rect key="frame" x="374" y="0.0" width="374" height="200"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <color key="backgroundColor" red="0.50145141599999998" green="0.50145141599999998" blue="0.50145141599999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <mutableString key="text">作詞：潘雲安   作曲：潘雲安
+編曲：告五人 Accusefive
+
+三番故里 窗外雨滴打破細碎的玻璃
+與你相遇 是在一個單純美好的世界
+而在變質那天 你淚流誇張情節
+足以向全世界討回 你付出的一切
+
+你的故事 存在一個需要密碼的盒子
+紀念時刻 打開卻會冒出一陣陣白煙
+像是警告自己 不能屈服嚮往從前
+天變地變 我們的愛也變
+
+而我 在這座城市 遺失了你
+順便遺失了自己
+以為荒唐到底 會有捷徑
+而我 在這座城市 失去了你
+輸給欲望高漲的自己
+不是你 過分的感情
+而我愛你 而愛無法 撐起
+想擁有的 想擁抱的
+以為能通向領悟的結局
+
+你的故事 存在一個需要密碼的盒子
+紀念時刻 打開卻會冒出一陣陣白煙
+像是警告自己 不能屈服嚮往從前
+天變地變 我們的愛也變
+
+而我 在這座城市 遺失了你
+順便遺失了自己
+以為荒唐到底 會有捷徑
+而我 在這座城市 失去了你
+輸給欲望高漲的自己
+不是你 過分的感情
+
+而我愛你 而愛無法 撐起
+想擁有的 想擁抱的
+以為能通向領悟的結局</mutableString>
+                                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                            <integer key="value" value="10"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </textView>
+                                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wbi-Dw-uTh">
+                                                                    <rect key="frame" x="748" y="0.0" width="374" height="200"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <color key="backgroundColor" red="0.50145141599999998" green="0.50145141599999998" blue="0.50145141599999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <mutableString key="text">作詞：施人誠   作曲：阿沁(FIR) / 盧家宏
+編曲：黃雨勳
+
+難以置信 我沒被放棄
+還有個妳 等在結局
+無法言喻 此刻的心情
+已經絕望 愛才降臨
+請別介意 我的笨拙遲疑
+畢竟我也不常擁有感情
+
+我很好騙 只需要動用幾滴眼淚
+就會深陷 才剛掙脫的那場夢魘
+笨到極點 再爛的謊言都視而不見
+我 根本活該被騙
+
+我很好騙 對愛太渴望變成死穴
+所有防備 全都防不了孤單侵略
+隨便個誰 就迫不及待又掏心掏肺
+我 難道已寂寞到 渴望被騙
+
+能遇見你 當然很珍惜
+但越奇蹟 就越懷疑
+我憑什麼 能夠擁有妳
+還夠運氣 不會失去
+青春不再 勇氣所剩無幾
+我真懷疑還能再傷次心
+
+我很好騙 只需要動用幾滴眼淚
+就會深陷 才剛掙脫的那場夢魘
+笨到極點 再爛的謊言都視而不見
+誰 都捨不得不騙
+
+我很好騙 對愛太渴望變成死穴
+所有防備 全都防不了孤單侵略
+隨便個誰 就迫不及待又掏心掏肺
+我 是否一直都在 自我欺騙
+
+我很好騙 就像沒來過這個世界
+不會分辨 哪幾種吻千萬別留戀
+天真以為 人再無情也至少有底線
+我 可憐還是可悲
+
+我很好騙 妳是否也有這種感覺
+妳的出現 會為我帶來哪種句點
+別說抱歉 如果我這次也難以倖免
+就 只求下手盡量 能輕一些</mutableString>
+                                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                            <integer key="value" value="10"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </textView>
+                                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tr5-9R-wgH">
+                                                                    <rect key="frame" x="1122" y="0.0" width="374" height="200"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <color key="backgroundColor" red="0.50145141599999998" green="0.50145141599999998" blue="0.50145141599999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <mutableString key="text">作詞：煙十八   作曲：鄭冰冰
+
+送你三月的風 六月的雨 九月的風景
+讓我餘生 都有關於你
+
+只如初見 回憶卻在蔓延
+就像夜晚的甜點 連我的夢境都變甘甜
+
+我願意為你放棄曾經那些年少輕狂
+不去再管所謂流浪或者遠方
+只想在你身旁把這情歌慢慢唱
+
+送你三月的風 六月的雨 九月的風景
+大雪漫天飄零做你的嫁衣 多美麗
+送你每個夢境 每次清醒 陪伴的長情
+讓我餘生 都有關於你
+
+我願意為你放棄曾經那些年少輕狂
+不去再管所謂流浪或者遠方
+只想在你身旁把這情歌慢慢唱
+
+送你三月的風 六月的雨 九月的風景
+大雪漫天飄零做你的嫁衣 多美麗
+送你每個夢境 每次清醒 陪伴的長情
+讓我餘生都有 關於你
+
+
+送你三月的風 六月的雨 九月的風景
+大雪漫天飄零做你的嫁衣 多美麗
+送你每個夢境 每次清醒 陪伴的長情
+讓我餘生都有 關於你
+
+送你三月的風 六月的雨 九月的風景
+大雪漫天飄零做你的嫁衣 多美麗
+如果歲月無情 你我老去 所有都漸漸忘記
+我會把你姓名刻心底 因為你是
+此生的 唯一</mutableString>
+                                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                            <integer key="value" value="10"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </textView>
+                                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Na-Le-aEm">
+                                                                    <rect key="frame" x="1496" y="0.0" width="374" height="200"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <color key="backgroundColor" red="0.50145141599999998" green="0.50145141599999998" blue="0.50145141599999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <mutableString key="text">作詞：五月天 阿信   作曲：五月天 阿信
+
+人群 煙火 香檳和氣球
+是你 帶我 從派對逃走
+逃離 人間 耳語和騷動
+這裏 只有 你我和星空
+你是 何時 靜靜靠近我
+你是 何時 偷偷拯救我
+在我 掌心 放了 一顆糖果
+
+人類 為何 都愛看天空
+背上 卻都 有一對傷口
+生在 這個 凡人的星球
+是否 不配 作天使的夢
+你將 你的 翅膀給了我
+帶我 穿越 狼群和鏡頭
+讓我 能夠 品嘗 片刻自由
+
+因為你 所以我 愛上那 片天空
+天空下 我在祈求 那是你 牽著我
+最深刻 的故事 最永恆 的傳說
+不過 是你 是我 能夠 平凡生活
+
+人生 只是 須臾的剎那
+人間 只是 天地的夾縫
+人們 何苦 要活成修羅
+活在 執著 對錯的牢籠
+是你 幫我 停下了沙漏
+是你 教我 別害怕闖禍
+是你 讓我 活得 與眾不同
+
+因為你 所以我 愛上那 片天空
+天空下 我在祈求 那是你 牽著我
+最深刻 的故事 最永恆 的傳說
+不過 是你 是我 能夠 平凡生活
+
+因為你 所以我 所以我 不退縮
+再不願 這一生中 有遺憾 不反駁
+不再聽 別人說 不在乎 誰能懂
+只因 世界 再大 不過 你和我
+用最小回憶 堆成宇宙
+
+因為你 所以我 愛上那 片天空
+天空下 我在祈求 那是你 牽著我
+最深刻 的故事 最永恆 的傳說
+不過 是你 是我 能夠 平凡生活
+
+因為你 所以我 所以我 不退縮
+再不願 這一生中 有遺憾 不反駁
+不再聽 別人說 不在乎 誰能懂
+只因 世界 再大 不過 你和我
+用最小回憶 堆成宇宙</mutableString>
+                                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                            <integer key="value" value="10"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </textView>
+                                                            </subviews>
+                                                            <viewLayoutGuide key="safeArea" id="eKI-F1-s1z"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </view>
+                                                    </subviews>
+                                                    <viewLayoutGuide key="contentLayoutGuide" id="igf-xY-Ryp"/>
+                                                    <viewLayoutGuide key="frameLayoutGuide" id="EHG-dQ-e1k"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="size" keyPath="contentSize">
+                                                            <size key="value" width="0.0" height="0.0"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </scrollView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="XKj-yX-RkO" id="FRd-Gc-ruu"/>
+                            <outlet property="delegate" destination="XKj-yX-RkO" id="H3f-Q1-J4x"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="華語年度單曲榜" id="PsH-Dw-smi"/>
+                    <connections>
+                        <outlet property="backButton" destination="TLa-WD-dEL" id="DPL-gQ-yJT"/>
+                        <outlet property="backgroundImage" destination="EHu-ZL-kHH" id="WCR-La-zh6"/>
+                        <outlet property="imageScrollView" destination="2XX-Cy-LXA" id="KOq-rf-34w"/>
+                        <outlet property="lyricScrollView" destination="Y9M-YD-yoH" id="CBe-z0-iMb"/>
+                        <outlet property="nextButton" destination="y3d-zu-gsw" id="0kq-9D-M3v"/>
+                        <outlet property="topLabel" destination="D5N-zf-1Qv" id="5lN-cK-GUT"/>
+                        <outlet property="topPageControl" destination="y8c-I5-EwB" id="ufD-dC-3EP"/>
+                        <outlet property="topSegmentedControl" destination="hYm-69-6BK" id="wxj-Yj-8yO"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wCT-7b-88v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="gny-H7-UPb">
+                    <connections>
+                        <action selector="swipeToChangePage:" destination="XKj-yX-RkO" id="lxf-pd-RWJ"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="a5v-gZ-CeG">
+                    <connections>
+                        <action selector="swipeToChangePage:" destination="XKj-yX-RkO" id="ha2-s1-I9k"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="mzz-db-L9B">
+                    <connections>
+                        <action selector="swipeToChangePage:" destination="XKj-yX-RkO" id="G2w-MR-Zut"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="qfh-yy-1Xv">
+                    <connections>
+                        <action selector="swipeToChangePage:" destination="XKj-yX-RkO" id="3sA-fB-mZO"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="4KQ-sw-zNC">
+                    <connections>
+                        <action selector="swipeToChangePage:" destination="XKj-yX-RkO" id="Lsu-Ad-b10"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="8Dv-HF-i3j">
+                    <connections>
+                        <action selector="swipeToChangePage:" destination="XKj-yX-RkO" id="pO3-aQ-cE2"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="KKh-Yn-b9D">
+                    <connections>
+                        <action selector="swipeToChangePage:" destination="XKj-yX-RkO" id="JuZ-hf-rGb"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="VtM-w7-Cwg">
+                    <connections>
+                        <action selector="swipeToChangePage:" destination="XKj-yX-RkO" id="fjb-u8-FVH"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="lsC-6Z-LtW">
+                    <connections>
+                        <action selector="swipeToChangePage:" destination="XKj-yX-RkO" id="yZj-6n-gnw"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="pP3-Oa-3sU">
+                    <connections>
+                        <action selector="swipeToChangePage:" destination="XKj-yX-RkO" id="auc-K9-bA9"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="2360.8695652173915" y="182.8125"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dXa-Wd-3Lh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GjP-ZB-TBE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="mI7-OE-zhy">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <navigationBarAppearance key="standardAppearance">
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <textAttributes key="titleTextAttributes">
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </textAttributes>
+                            <textAttributes key="largeTitleTextAttributes">
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </textAttributes>
+                        </navigationBarAppearance>
+                        <navigationBarAppearance key="scrollEdgeAppearance">
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <textAttributes key="titleTextAttributes">
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </textAttributes>
+                            <textAttributes key="largeTitleTextAttributes">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </textAttributes>
+                        </navigationBarAppearance>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="XKj-yX-RkO" kind="relationship" relationship="rootViewController" id="6KZ-ie-F8k"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ang-d8-Kga" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1031.8840579710145" y="183.48214285714286"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="1" width="500" height="500"/>
+        <image name="2" width="500" height="500"/>
+        <image name="3" width="500" height="500"/>
+        <image name="4" width="500" height="500"/>
+        <image name="5" width="500" height="500"/>
+        <image name="left" width="48" height="48"/>
+        <image name="right" width="48" height="48"/>
+    </resources>
 </document>
